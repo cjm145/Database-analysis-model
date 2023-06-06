@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%
+    }
+
+    th,
+    td {
+        padding: 8px 16px;
+        border: 1px solid #ccc;
+    }
+
+    th {
+        background: #eee;
+    }
+</style>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Profession of person</title>
+
+        <ul id="menu">
+            <li><a href="person">Main Page</a><br></li>
+            <li><a href="firstdata">What is the estimated number of individuals based on gender and their origin?</a></li>
+            <li><a href="third_data">What is the lowest age of death based on occupation?</a></li>
+        </ul>
+
+</head>
+
+<body>
+    <h1>“What are the different death factors of the individual?”</h1>
+    <table>
+        <tr>
+            <th>Manner Of Death</th>
+            <th>Frequency</th>
+        </tr>
+        {{#data}}
+        <tr>
+            <td>{{MannerOfDeath}}</td>
+            <td>{{frequency}}</td>
+        </tr>
+        {{/data}}
+    </table>
+</body>
+
+</head>
+
+</html>
